@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #222;        /* Dark background */
+    color: #fff;             /* White text */
+    margin: 0;
+    padding: 20px;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;               /* Space between images */
+    margin-top: 20px;
+}
+
+#gallery img {
+    width: 250px;            /* Fixed width for images */
+    height: auto;            /* Keep aspect ratio */
+    border-radius: 10px;     /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Subtle shadow */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);  /* Slight zoom on hover */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+.controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;               /* Space between input and button */
+    flex-wrap: wrap;         /* Wrap on small screens */
+    align-items: center;
+  }
+  
+  /* Style the file input */
+  .controls input[type="file"] {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #333;
+    color: #eee;
+    font-size: 14px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Hover/focus effect for file input */
+  .controls input[type="file"]:hover,
+  .controls input[type="file"]:focus {
+    background-color: #444;
+    border-color: #7f7fff;
+    outline: none;
+  }
+  
+  /* Style the clear button */
+  .controls button {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #7f7fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(127,127,255,0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for button */
+  .controls button:hover {
+    background-color: #5a5fd1;
+    box-shadow: 0 5px 15px rgba(90,95,209,0.8);
+  }
+  
+  /* Responsive: stack vertically on narrow screens */
+  @media (max-width: 400px) {
+    .controls {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .controls input[type="file"],
+    .controls button {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
