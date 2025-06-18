@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
   <meta charset="UTF-8" />
-  <title>Dynamic Meme Gallery</title>
+  <title>Simple Meme Gallery</title>
   <style>
     #gallery {
       display: flex;
@@ -22,10 +22,6 @@
 <body>
   <h1>Simple Meme Gallery</h1>
   
-  <!-- File input to select multiple images -->
-  
-  
-  <!-- Container for meme images -->
   <div id="gallery"></div>
 
   
@@ -36,6 +32,6 @@
   
 
   
-  <script src="script.js"></script>
+ <script src="{{ asset('script.js') }}"></script>
 </body>
 </html>
